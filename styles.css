@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+#home-screen {
+    margin-top: 100px;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    font-size: 18px;
+}
+
+#timer, #round {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#game-screen {
+    margin-top: 20px;
+}
+
+#movie-title {
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+#chatbox {
+    margin-top: 10px;
+}
+
+#chatbox input[type=text] {
+    padding: 10px;
+    font-size: 16px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#chatbox button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#chatbox button:hover {
+    background-color: #45a049;
+}
+
+#guesses {
+    margin-top: 10px;
+}
+
+#hints {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+#guesses p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+#movie-title span {
+    display: inline-block;
+    margin: 0 2px;
+    padding: 5px;
+    border-bottom: 2px solid #000;
+}
