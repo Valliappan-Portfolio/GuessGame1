@@ -61,11 +61,11 @@ function updateMovieTitle() {
         return;
     }
     let title = currentMovie.title.split('').map(letter => revealedLetters.includes(letter) ? letter : (letter === ' ' ? ' ' : '-')).join('');
-    title = title.substring(0, 8); // Limit to first 8 characters
     let letterCount = `(${currentMovie.title.length} letters)`;
     document.getElementById('movie-title').innerHTML = `${title} <small>${letterCount}</small>`;
     console.log("Movie Title Display:", title);
 }
+
 
 function startHintAndLetterReveal() {
     if (!currentMovie) {
@@ -93,6 +93,27 @@ function revealHint() {
         clearInterval(hintInterval);
     }
 }
+function showDialog(message) {
+    document.getElementById('dialog-text').innerText = message;
+    document.getElementById('dialog').style.display = 'block';
+}
+
+function closeDialog() {
+    document.getElementById('dialog').style.display = 'none';
+}
+
+// Replace alert calls with showDialog
+function revealAnswer() {
+    if (!currentMovie) {
+        console.error('No current movie to reveal answer for');
+        return;
+    }
+    showDialog("Time's up! The movie was " + currentMovie.title);
+    clearInterval(hintInterval);
+    clearInterval(letterInterval);
+    startNewRound();
+}
+
 
 function revealLetter() {
     if (!currentMovie) {
